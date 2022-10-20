@@ -2,12 +2,15 @@
 
 Here is a list of workflows that we use at Apto.
 
-##Table of Contents
+## Table of Contents
 
 1. [IDE Setup for Symfony (PHPStorm)](https://github.com/agaktr/workflows/blob/master/steps/step1.md) 
 2. [Clone Apto Library](https://github.com/agaktr/workflows/blob/master/steps/step2.md) 
 3. [Install Dependencies](https://github.com/agaktr/workflows/blob/master/steps/step3.md) 
-4. [Create Webpack Assets](https://github.com/agaktr/workflows/blob/master/steps/step4.md) 
+4. [Clear Cache](https://github.com/agaktr/workflows/blob/master/steps/step4.md) 
+5. [Upload Project to Github](https://github.com/agaktr/workflows/blob/master/steps/step5.md) 
+
+[//]: # (4. [Create Webpack Assets]&#40;https://github.com/agaktr/workflows/blob/master/steps/step4.md&#41; )
 
 
 ## 1. IDE setup (Windows)
