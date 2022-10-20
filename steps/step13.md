@@ -12,5 +12,5 @@ php bin/console doctrine:fixtures:load
 ```
 
 <div align="right">
-<a href="https://github.com/agaktr/workflows/blob/master/steps/step13.md" align="right">Next: Clear Cache</a>
+<a href="https://github.com/agaktr/workflows/blob/master/steps/step14.md" align="right">Next: Clear Cache</a>
 </div>  
