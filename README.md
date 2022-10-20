@@ -1,6 +1,6 @@
 # Apto Workflows
 
-Here is a list of workflows that I use in my projects.
+Here is a list of workflows that we use at Apto.
 
 ##Table of Contents
 
