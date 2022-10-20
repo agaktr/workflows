@@ -29,8 +29,6 @@ yarn encore dev --watch
 
 If you leave the watcher on, you can open a new terminal window and continue with the next steps.
 
-![Step 4](../images/step41.png)
-
 <div align="right">
-<a href="https://github.com/agaktr/workflows/blob/master/steps/step4.md" align="right">Next: Install Dependencies</a>
+<a href="https://github.com/agaktr/workflows/blob/master/steps/step12.md" align="right">Next: Configure the .env file</a>
 </div>  
