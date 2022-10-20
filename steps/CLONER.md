@@ -7,7 +7,7 @@ Create a new project in PhpStorm with no configuration.
 File > New Project... > PHP Empty Project
 ```
 
-![asdff](../images/step1.png)
+![Step 1](../images/step1.png)
 
 ### 1.1. Clone the symfony5.4 project
 
