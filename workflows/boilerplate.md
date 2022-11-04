@@ -95,7 +95,7 @@ $builder
 Now we will copy paste all the boilerplate twig files to the new entity
 ```bash
 #copy the boilerplate folder to the new entity folder
-cp -r templates/boilerplate templates/entity
+cp -a templates/boilerplate/. templates/entity
 ```
 
 Add the menu item to a menu
