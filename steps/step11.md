@@ -19,6 +19,12 @@ publicPath: '/symfony/public/build',
 publicPath: '/public/build',
 ```
 
+```bash
+#push webpack config changes to github
+#then pull the new config to the dev server
+git pull origin dev
+```
+
 In the terminal, run the following commands to build the assets:
 ```bash
 #build assets
