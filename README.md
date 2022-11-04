@@ -18,3 +18,7 @@ Here is a list of workflows that we use at Apto.
 12. [Configure the .env file](https://github.com/agaktr/workflows/blob/master/steps/step12.md) 
 13. [Create database](https://github.com/agaktr/workflows/blob/master/steps/step13.md) 
 14. [Clear Cache](https://github.com/agaktr/workflows/blob/master/steps/step14.md) 
+
+## Workflows
+
+1. [Create a new Boilerplate](https://github.com/agaktr/workflows/blob/master/workflows/boilerplate.md) 
