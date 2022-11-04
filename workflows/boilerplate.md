@@ -92,6 +92,12 @@ $builder
     ])
 ```
 
+Now we will copy paste all the boilerplate twig files to the new entity
+```bash
+#copy the boilerplate folder to the new entity folder
+cp -r templates/boilerplate templates/entity
+```
+
 Add the menu item to a menu
 ```php
 //open src/Service/MenuService.php
@@ -110,4 +116,30 @@ Add a menu image to the assets folder
 #open the assets/images folder
 #add a new svg with the name of the entity
 entity.svg
+```
+
+Now we will change the index template to show the new entity
+```html
+#open templates/entity/index.html.twig
+#change the th to match our new entity
+<th scope="col" class="whitespace-nowrap text-sm font-medium text-gray-900 px-6 py-4 text-left">
+    name
+</th>
+<th scope="col" class="whitespace-nowrap text-sm font-medium text-gray-900 px-6 py-4 text-left">
+    content
+</th>
+<th scope="col" class="whitespace-nowrap text-sm font-medium text-gray-900 px-6 py-4 text-left">
+    User
+</th>
+
+#also change th td to match the new entity
+<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+    {{ entity_item.name }}
+</td>
+<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+    {{ entity_item.content }}
+</td>
+<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+    {{ entity_item.user.userIdentifier }}
+</td>
 ```
