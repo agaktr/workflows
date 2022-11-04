@@ -123,10 +123,10 @@ Now we will change the index template to show the new entity
 #open templates/entity/index.html.twig
 #change the th to match our new entity
 <th scope="col" class="whitespace-nowrap text-sm font-medium text-gray-900 px-6 py-4 text-left">
-    name
+    Column1
 </th>
 <th scope="col" class="whitespace-nowrap text-sm font-medium text-gray-900 px-6 py-4 text-left">
-    content
+    Column2
 </th>
 <th scope="col" class="whitespace-nowrap text-sm font-medium text-gray-900 px-6 py-4 text-left">
     User
@@ -134,10 +134,10 @@ Now we will change the index template to show the new entity
 
 #also change th td to match the new entity
 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-    {{ entity_item.name }}
+    {{ entity_item.column1 }}
 </td>
 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-    {{ entity_item.content }}
+    {{ entity_item.column2 }}
 </td>
 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
     {{ entity_item.user.userIdentifier }}
