@@ -34,21 +34,16 @@ class EntityController extends AptoAbstractController
 
 //copy the index method from the BoilerplateController to the new controller
 //change the BoilerplateRepository $boilerplateRepository to the new entity repository
-//change the $boilerplateRepository->count([]) to $entityRepository->count([])
-//change the $boilerplateRepository->findBy([]) to $entityRepository->findBy([])
-//change the boilerplate/index.html.twig to entity/index.html.twig
-//this will allow us to filter the results based on the request query parameters
-//and also to add pagination
 public function index(Request $request,EntityRepository $entityRepository): Response
 {
 
     $currentPage = $request->get('_page', 1);
     $offset = ($currentPage - 1) * self::PER_PAGE;
 
-    $total = $entityRepository->count([]);
-    $entities = $entityRepository->findBy([],[],self::PER_PAGE,$offset);
+    $total = ${$this->entityName.'Repository'}->count([]);
+    $entities = ${$this->entityName.'Repository'}->findBy([],[],self::PER_PAGE,$offset);
 
-    return $this->render('entity/index.html.twig', [
+    return $this->render($this->entityName.'/index.html.twig', [
         'entities' => [
             'items'=>$entities,
             'total' => $total,
@@ -58,7 +53,7 @@ public function index(Request $request,EntityRepository $entityRepository): Resp
     ]);
 }
 
-//on the new function, add the $this->cache->flushdb(); when the entity is saved
+//on the new() function, add the $this->cache->flushdb(); when the entity is saved
 //this will clear the Redis cache for the entity
 if ($form->isSubmitted() && $form->isValid()) {
     $boilerplateRepository->add($boilerplate, true);
@@ -66,7 +61,7 @@ if ($form->isSubmitted() && $form->isValid()) {
     //add this line
     $this->cache->flushdb();
 
-    return $this->redirectToRoute('app_boilerplate_index', [], Response::HTTP_SEE_OTHER);
+    ...
 }
 ```
 
@@ -74,6 +69,8 @@ Now we have to tell doctrine to cache the entity
 ```php
 //open src/Entity/Entity.php that was created by the crud generator
 //add the following annotation to the class
+
+use Doctrine\ORM\Mapping\Cache;
 
 /**
  ...
