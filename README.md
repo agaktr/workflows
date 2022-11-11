@@ -2,7 +2,7 @@
 
 Here is a list of workflows that we use at Apto.
 
-## Table of Contents
+[//]: # (## Table of Contents)
 
 [//]: # (1. [IDE Setup for Symfony &#40;PHPStorm&#41;]&#40;https://github.com/agaktr/workflows/blob/master/steps/step1.md&#41; )
 

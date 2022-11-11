@@ -34,21 +34,27 @@ composer install
 
 #install yarn dependencies
 yarn install
+
+#watch assets for changes
+yarn encore dev --watch
 ```
 
 This will allow the IDE to understand the code and provide code completion and other useful features.
+
+Leave this terminal window open and open a new terminal window to continue with the next steps.
+
 ![Step 3](../images/step3.png)
 
-# Clear Cache
+[//]: # (# Watch for changes in the local assets)
 
-When you are done, clear the cache:
-```bash
-php bin/console cache:clear
-```
+[//]: # (When you are done, run the following command to watch for changes in the assets:)
+[//]: # (```bash)
+[//]: # (yarn encore dev --watch)
+[//]: # (```)
 
-This will make the project ready to be uploaded to our VCS (Github).
+[//]: # (Leave this terminal window open and open a new terminal window to continue with the next steps.)
 
-![Step 4](../images/step4.png)
+[//]: # (![Step 4]&#40;../images/step4.png&#41;)
 
 # Upload Project to Github
 
@@ -68,7 +74,7 @@ git push --set-upstream origin dev
 Now you can safely work on the dev branch and push your changes to github.
 With the dev branch, you can create a pull request to the master branch when you are done with your changes.
 
-The server will automatically deploy the dev/prod branches using a cron job.
+[//]: # (The server will automatically deploy the dev/prod branches using a cron job.)
 
 ![Step 5](../images/step5.png)
 
@@ -127,19 +133,27 @@ git checkout dev
 
 ![Step 8](../images/step8.png)
 
-# Create CRON job to deploy the dev branch
+[//]: # (# Create CRON job to deploy the dev branch)
 
-On SSH screen(2.2), run the following commands:
-```bash
-#On SSH screen(2.2) run the following command
-crontab -e
+[//]: # ()
+[//]: # (On SSH screen&#40;2.2&#41;, run the following commands:)
 
-#Add the following line to the file
-#This will run the deploy script every 1 minute
-* * * * * cd /home/{projectName} && git fetch && git checkout dev && git pull origin dev 
-```
+[//]: # (```bash)
 
-![Step 9](../images/step9.png)
+[//]: # (#On SSH screen&#40;2.2&#41; run the following command)
+
+[//]: # (crontab -e)
+
+[//]: # ()
+[//]: # (#Add the following line to the file)
+
+[//]: # (#This will run the deploy script every 1 minute)
+
+[//]: # (* * * * * cd /home/{projectName} && git fetch && git checkout dev && git pull origin dev )
+
+[//]: # (```)
+
+[//]: # (![Step 9]&#40;../images/step9.png&#41;)
 
 # Install Dependencies
 
@@ -150,48 +164,82 @@ composer install
 
 #install yarn dependencies
 yarn install
+
+#watch assets for changes
+yarn encore dev --watch
 ```
 
 This will install all the dependencies for the project.
 
+Leave this terminal window open and open a new ssh terminal window to continue with the next steps.
+
 ![Step 10](../images/step10.png)
 
-# Create Webpack Assets
+[//]: # (# Create Webpack Assets)
 
-If you are on a development server (ex. blackflag.cloud), we need to change the `publicPath` in `webpack.config.js` file to use the correct path for the public folder.
+[//]: # ()
+[//]: # (If you are on a development server &#40;ex. blackflag.cloud&#41;, we need to change the `publicPath` in `webpack.config.js` file to use the correct path for the public folder.)
 
-```bash
-#change webpack.config.js file to use the correct path for the public folder
-#change the following line
-publicPath: '/symfony/public/build',
-#to
-publicPath: '/build',
-```
+[//]: # ()
+[//]: # (```bash)
 
-If instead you are using XAMPP, you can use the following configuration:
-```bash
-#change webpack.config.js file to use the correct path for the public folder
-#change the following line
-publicPath: '/symfony/public/build',
-#to
-publicPath: '/public/build',
-```
+[//]: # (#change webpack.config.js file to use the correct path for the public folder)
 
-```bash
-#push webpack config changes to github
-#then pull the new config to the dev server
-git pull origin dev
-```
+[//]: # (#change the following line)
 
-In the terminal, run the following commands to build the assets:
-```bash
-#build assets
-yarn encore dev
-#or if you want to watch for changes
-yarn encore dev --watch
-```
+[//]: # (publicPath: '/symfony/public/build',)
 
-If you leave the watcher on, you can open a new terminal window and continue with the next steps.
+[//]: # (#to)
+
+[//]: # (publicPath: '/build',)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (If instead you are using XAMPP, you can use the following configuration:)
+
+[//]: # (```bash)
+
+[//]: # (#change webpack.config.js file to use the correct path for the public folder)
+
+[//]: # (#change the following line)
+
+[//]: # (publicPath: '/symfony/public/build',)
+
+[//]: # (#to)
+
+[//]: # (publicPath: '/public/build',)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (#push webpack config changes to github)
+
+[//]: # (#then pull the new config to the dev server)
+
+[//]: # (git pull origin dev)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (In the terminal, run the following commands to build the assets:)
+
+[//]: # (```bash)
+
+[//]: # (#build assets)
+
+[//]: # (yarn encore dev)
+
+[//]: # (#or if you want to watch for changes)
+
+[//]: # (yarn encore dev --watch)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (If you leave the watcher on, you can open a new terminal window and continue with the next steps.)
 
 # Configure the .env file
 
@@ -199,6 +247,9 @@ This is for development server only. (ex. blackflag.cloud)
 ```bash
 #copy the .env file and rename it to .env.local
 cp .env .env.local
+
+#open the .env.local file
+nano .env.local
 ```
 
 ```dotenv
