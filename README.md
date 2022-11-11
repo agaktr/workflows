@@ -21,4 +21,5 @@ Here is a list of workflows that we use at Apto.
 
 ## Workflows
 
-1. [Create a new Boilerplate](https://github.com/agaktr/workflows/blob/master/workflows/boilerplate.md) 
+1. [IDE Setup for Symfony (PHPStorm)](https://github.com/agaktr/workflows/blob/master/workflows/boilerplate.md) 
+2. [Create a new Boilerplate](https://github.com/agaktr/workflows/blob/master/workflows/boilerplate.md) 
